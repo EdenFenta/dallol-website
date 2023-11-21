@@ -1,13 +1,44 @@
+:root {
+  --background-color: #ffffff; /* White */
+  --logo-text-color: #feb501; /* Logo color */
+  --body-text-color: #000000; /* Black */
+  --font-family: Arial, sans-serif;
+  --hover-color-white-bg: var(
+    --logo-text-color
+  ); /* Hover color when background is white */
+  --hover-color-non-white-bg: #ffffff; /* Hover color when background is not white */
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: var(--background-color);
+  color: var(--body-text-color);
+  font-family: var(--font-family);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--logo-text-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--hover-color-white-bg);
+}
+
+body:not(.white-bg) a:hover {
+  color: var(--hover-color-non-white-bg);
 }
