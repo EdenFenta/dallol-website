@@ -1,28 +1,36 @@
 import React from "react";
 import "./NavBar.css";
-import logo from "D:/Dallol Cabinets/dallol-website/src/Img/DCLogo2.png"; // replace with the actual path to your logo
+import logo from "../../Img/DCLogo1.png";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   return (
     <nav className="navbar">
-      <img src={logo} alt="Logo" className="logo" />
       <div className="nav-links">
-        <a href="/" className="nav-item">
+        <div className="logo-container">
+          <Link to="/">
+            <img src={logo} alt="Logo" className="logo" />
+          </Link>
+        </div>
+        <Link to="/" className="nav-item">
           Home
-        </a>
-        <a href="/about" className="nav-item">
+        </Link>
+        <Link to="/about" className="nav-item">
           About
-        </a>
-        <a href="/catalog" className="nav-item">
+        </Link>
+        <Link to="/catalog" className="nav-item">
           Catalog
-        </a>
-        <a href="/designprocess" className="nav-item">
+        </Link>
+        <Link to="/designprocess" className="nav-item">
           Design Process
-        </a>
-        <button className="contact-button">Contact Us</button>
+        </Link>
+        <button className="contact-button">
+          <Link to="/contactus" className="contact-link">
+            Contact Us
+          </Link>
+        </button>
       </div>
     </nav>
   );
 }
-
 export default NavBar;

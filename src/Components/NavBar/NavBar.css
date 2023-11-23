@@ -1,56 +1,92 @@
-/* NavBar.css */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around; /* evenly distribute items along the line */
-  align-items: center;
-  padding: 1em;
-  background-color: #fff; /* change background color to white */
-  z-index: 100; /* ensure the navbar is above other elements */
-  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1); /* add a subtle shadow for a softer look */
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue");
+
+:root {
+  --navbar-bg-color: #fff;
+  --nav-item-hover-color: #feb501;
+  --contact-button-bg-color: rgba(254, 181, 1, 0.1);
+  --contact-button-border-color: #feb501;
+  --nav-item-color: #000;
+  --contact-button-color: #feb501;
 }
 
-.logo {
-  height: 60px; /* adjust as needed */
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em 0;
+  background-color: var(--navbar-bg-color);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .nav-links {
   display: flex;
-  gap: 1em;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2em;
+  width: 80%;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 90px;
+  object-fit: contain;
 }
 
 .nav-item {
-  color: #000; /* change text color to black */
+  color: var(--nav-item-color);
   text-decoration: none;
+  padding: 10px;
+  transition: all 0.3s ease;
 }
 
 .nav-item:hover {
-  color: #feb501; /* change hover color to yellow */
+  border: 1px solid var(--nav-item-hover-color);
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--nav-item-hover-color);
+  color: var(--contact-button-color);
 }
 
 .contact-button {
-  background-color: #feb501;
-  color: #000;
-  border: none;
+  background-color: var(--contact-button-bg-color);
+  color: var(--contact-button-color);
   padding: 0.5em 1em;
   cursor: pointer;
+  border: 1px solid var(--contact-button-border-color);
+  border-radius: 15px;
+  box-shadow: 0 0 10px var(--contact-button-border-color);
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
 }
 
 .contact-button:hover {
-  background-color: #eaa400;
-  color: #fff;
+  background-color: var(--contact-button-border-color);
+  border: 1px solid var(--contact-button-border-color);
+  color: var(--navbar-bg-color);
 }
 
-/* Responsive design */
+.contact-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.contact-link:hover {
+  color: inherit;
+}
+
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column; /* stack items vertically on small screens */
+    flex-direction: column;
   }
 
-  .logo {
-    margin-bottom: 1em; /* add some space between the logo and the links */
+  .nav-links {
+    width: 100%;
   }
 }
