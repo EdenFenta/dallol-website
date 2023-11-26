@@ -1,0 +1,89 @@
+.home {
+  display: flex;
+  justify-content: space-between;
+  height: 77vh;
+  margin: 6rem 3rem 8rem;
+}
+.texts {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.title {
+  color: black;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-left: -1rem;
+}
+
+.subtitle {
+  color: #feb501;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-left: 2rem;
+}
+
+.description {
+  color: var(--gray);
+  font-size: 16px;
+  margin-top: 1rem;
+  margin-left: -1rem;
+  font-weight: normal;
+}
+
+.cards {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards > * {
+  position: absolute;
+}
+
+.Card .heading {
+  color: #feb501;
+  font-size: 3.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .home {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+    margin: 5rem 0;
+  }
+  .texts,
+  .cards {
+    width: 100%;
+  }
+  .cards {
+    position: static;
+    gap: 17rem;
+  }
+  .cards > * {
+    position: static;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .home {
+    margin-top: 4rem;
+  }
+
+  .title,
+  .subtitle {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: 14px;
+  }
+
+  .cards {
+    gap: 15rem;
+  }
+}

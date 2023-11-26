@@ -23,10 +23,10 @@
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  background-color: #feb501;
-  border: 1px solid #fff;
+  background-color: rgba(254, 181, 1, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   border-radius: 15px;
-  box-shadow: 0 0 10px #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
   padding: 80px;
 }
 
@@ -36,17 +36,17 @@
 
 .line-1 {
   font-size: 36px;
-  color: black;
+  color: #333;
 }
 
 .line-2 {
   font-size: 48px;
-  color: #fff;
+  color: #eee;
 }
 
 .line-3 {
   font-size: 36px;
-  color: black;
+  color: #333;
 }
 
 .left-arrow,
