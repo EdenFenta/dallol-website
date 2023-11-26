@@ -10,7 +10,7 @@ const Home = () => {
   };
 
   return (
-    <div className="home">
+    <div id="home" className="home">
       <div className="texts">
         <span className="title">Elevate Your Space</span>
         <div className="subtitle">- with Dallol</div>

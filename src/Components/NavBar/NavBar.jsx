@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBar.css";
 import logo from "../../Img/DCLogo1.png";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 
 function NavBar() {
   return (
@@ -12,20 +12,60 @@ function NavBar() {
             <img src={logo} alt="Logo" className="logo" />
           </Link>
         </div>
-        <Link to="/" className="nav-item">
+        <Link
+          to="home"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="nav-item"
+        >
           Home
         </Link>
-        <Link to="/about" className="nav-item">
+        <Link
+          to="about"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="nav-item"
+        >
           About
         </Link>
-        <Link to="/catalog" className="nav-item">
+        <Link
+          to="catalog"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="nav-item"
+        >
           Catalog
         </Link>
-        <Link to="/designprocess" className="nav-item">
+        <Link
+          to="designprocess"
+          activeClass="active"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+          className="nav-item"
+        >
           Design Process
         </Link>
         <button className="contact-button">
-          <Link to="/contactus" className="contact-link">
+          <Link
+            to="/contactus"
+            activeClass="active"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+            className="contact-link"
+          >
             Contact Us
           </Link>
         </button>
