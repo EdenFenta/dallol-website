@@ -1,0 +1,59 @@
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.catalog-item {
+  position: relative;
+}
+
+.catalog-image {
+  width: 100%;
+  height: auto;
+}
+
+.catalog-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.catalog-item:hover .catalog-title {
+  opacity: 1;
+}
+
+/* For mobile devices */
+@media (max-width: 600px) {
+  .catalog-title {
+    opacity: 1;
+  }
+}
+
+/* For tablets */
+@media (min-width: 601px) and (max-width: 900px) {
+  .catalog {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+}
+
+/* For small desktops */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .catalog {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+/* For large desktops */
+@media (min-width: 1201px) {
+  .catalog {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+}

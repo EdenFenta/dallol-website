@@ -3,6 +3,8 @@
   justify-content: space-between;
   height: 77vh;
   margin: 6rem 3rem 8rem;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .texts {
   width: 45%;
